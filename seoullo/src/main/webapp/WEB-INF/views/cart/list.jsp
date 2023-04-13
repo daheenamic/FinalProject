@@ -51,9 +51,9 @@ a:focus{
 	margin-left:-4px;
 }
 #imgDiv{
-	width: 80px;
-	height : 80px;
-	border-radius: 70%;
+	width: 90px;
+	height : 90px;
+	border-radius: 10%;
 	overflow: hidden;
 	margin-left: 60px;
 }

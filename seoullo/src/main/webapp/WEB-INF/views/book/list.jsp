@@ -42,6 +42,9 @@ a:focus {
 .bBtn{
 	float: right;
 }
+.tourViewDiv:hover{
+	cursor: pointer;
+}
 </style>
 <script type="text/javascript">
 $(function(){
@@ -121,12 +124,12 @@ $(function(){
 				<div class="tourInfoDiv">투어상품정보</div>
 					<c:forEach items="${vo.bookDetailList }" var="view">
 						<div class="row" style="padding:10px 0;">
-							<div class="col-md-4">
+							<div class="col-md-4 tourViewDiv" onclick="location.href='/tour/view.do?no=${view.tourNo }';">
 								<div id="imgDiv">								
 									<img src="${view.thumbnail }" class="img" alt="${view.thumbnail }">
 								</div>
 							</div>
-							<div class="col-md-5">
+							<div class="col-md-5 tourViewDiv" onclick="location.href='/tour/view.do?no=${view.tourNo }';">
 								<span>[ ${view.type } ] </span> <br/>
 								<span>[ ${view.title } ]</span> <br/>
 								<span>[ ${view.region } ]</span> <br/>
