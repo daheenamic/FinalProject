@@ -1,0 +1,27 @@
+package com.seoullo.book.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import com.seoullo.book.mapper.BookMapper;
+import com.seoullo.book.vo.BookVO;
+import com.webjjang.util.PageObject;
+
+import lombok.Setter;
+
+@Service
+@Qualifier("bookServiceImpl")
+public class BookServiceImpl implements BookService {
+	
+	@Setter(onMethod_ = @Autowired)
+	private BookMapper mapper;
+
+	@Override
+	public List<BookVO> list(PageObject pageObject) {
+		pageObject.setTotalRow(mapper.getTotalRow(pageObject));
+		return mapper.list(pageObject);
+	}
+
+}

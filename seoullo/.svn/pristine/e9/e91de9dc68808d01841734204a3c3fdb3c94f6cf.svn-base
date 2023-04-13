@@ -1,0 +1,31 @@
+package com.seoullo.book.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.seoullo.book.service.BookService;
+import com.webjjang.util.PageObject;
+
+import lombok.extern.log4j.Log4j;
+
+@Controller
+@RequestMapping("/book")
+@Log4j
+public class BookController {
+	
+	private String module = "book";
+	
+	@Autowired
+	@Qualifier("bookServiceImpl")
+	private BookService service;
+	
+	@RequestMapping("/list.do")
+	public String list(PageObject pageObject, Model model) {
+		log.info("예약리스트");
+		model.addAttribute("list", service.list(pageObject));
+		return module + "/list";
+	}
+}
