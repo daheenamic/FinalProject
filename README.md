@@ -29,7 +29,6 @@
 * DBCP : HikariCP
 * 기타 주요 라이브러리 : jdbc, lombok, aspectJ, log4j, log4j2
 
-***
 ## 📌 주요 개발 기능
 #### 투어 예약 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD)">상세보기</a>
 - 회원의 투어 일자와 인원 선택
