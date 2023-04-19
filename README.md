@@ -23,11 +23,11 @@
 * Java 8
 * JDK 1.8
 * IDE: STS 4
-* Framework: Spring
-* Database: OracleDB 11g XE
-* ORM: MyBatis
-* DBCP: HikariCP
-* 기타 주요 라이브러리: jdbc, lombok, aspectJ, log4j, log4j2
+* Framework : Spring
+* Database : OracleDB 11g XE
+* ORM : MyBatis
+* DBCP : HikariCP
+* 기타 주요 라이브러리 : jdbc, lombok, aspectJ, log4j, log4j2
 
 ***
 ## 📌 주요 개발 기능
