@@ -30,13 +30,13 @@
 * 기타 주요 라이브러리 : jdbc, lombok, aspectJ, log4j, log4j2
 
 ## 📌 주요 개발 기능
-#### 투어 예약 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD)">상세보기</a>
+#### 투어 예약 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD)">[상세보기]</a>
 - 회원의 투어 일자와 인원 선택
 - 예약자 정보 입력 후 결제 및 예약
 - 가이드의 투어 상태 변경 (투어완료)
 - 회원의 투어 예약 취소
 - 관리자의 투어 예약 상태 변경 (예약완료, 예약취소)
 
-#### 장바구니 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88)">상세보기</a>
+#### 장바구니 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88)">[상세보기]</a>
 - 투어 일자와 인원 선택 후 장바구니에 담기
 - 장바구니 인원 수정과 장바구니 삭제
