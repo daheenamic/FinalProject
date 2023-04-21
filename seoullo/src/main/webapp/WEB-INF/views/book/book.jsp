@@ -56,11 +56,11 @@
 <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 <script type="text/javascript">
 
-// 전화번호 하이픈
+// 연락처 하이픈 자동 삽입
 const hypenTel = (target) => {
 	target.value = target.value.replace(/[^0-9]/g, '').replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
 }
-// 신용카드 하이픈
+// 신용카드 하이픈 자동 삽입
 const hypenCredit = (target) => {
 	target.value = target.value.replace(/[^0-9]/g, '').replace(/^(\d{4})(\d{4})(\d{4})(\d{4})$/, `$1-$2-$3-$4`);
 }
@@ -89,6 +89,7 @@ $(function(){
 	  $('#male').prop('checked', true);
 	}
 
+	// 예약하기 버튼 눌렀을 때
 	$("#bookForm").submit(function() {
 		const result = confirm('예약 하시겠습니까?');
 		return result;

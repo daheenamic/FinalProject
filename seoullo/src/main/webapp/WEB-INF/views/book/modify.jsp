@@ -43,7 +43,7 @@
 </style>
 <script type="text/javascript">
 
-//전화번호 하이픈
+//전화번호 하이픈 자동 입력
 const hypenTel = (target) => {
 	target.value = target.value.replace(/[^0-9]/g, '').replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
 }
@@ -73,6 +73,7 @@ $(function(){
 	  $('#male').prop('checked', true);
 	}
 
+	// 변경하기 버튼 누르기
 	$("#modifyForm").submit(function() {
 		const result = confirm('변경 하시겠습니까?');
 		return result;

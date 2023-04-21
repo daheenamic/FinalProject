@@ -15,6 +15,7 @@ public interface BookMapper {
 	// 리스트
 	public List<BookVO> list(PageObject pageObject);
 	
+	// 페이징 처리를 위한 전체 데이터 갯수 가져오기
 	public long getTotalRow(PageObject pageObject);
 	
 	// 회원 리스트
@@ -24,14 +25,16 @@ public interface BookMapper {
 	public List<GuideVO> guideList(long tourNo);
 	public List<GuideDetailVO> guideDetailList(@Param("day")Date day, @Param("tourNo")long tourNo);
 	
-	// 상세보기
+	// 상세보기 - 예약자 정보
 	public BookVO view(long no);
 	
+	// 상세보기 - 투어정보
 	public List<BookDetailVO> viewDetail(long bookNo);	
 
-	// 예약하기
+	// 예약하기 - 예약자정보 INSERT
 	public int book(BookVO vo);
 	
+	// 예약하기 - 투어정보 INSERT
 	public int bookDetail(BookDetailVO vo);
 	
 	// 예약 취소
@@ -42,12 +45,10 @@ public interface BookMapper {
 	
 	// 리뷰상태 바꾸기
 	public int updateReview(long no); // 후기 등록 : 작성가능 -> 작성완료
-	
 	public int deleteReview(long no); // 후기 삭제 : 작성완료 -> 작성가능
 	
 	// 예약 가능 인원 수정하기
 	public int incReserveNum(BookDetailVO vo); // 증가
-	
 	public int decReserveNum(BookDetailVO vo); // 감소
 	
 	// 예약 인원 가져오기
@@ -57,13 +58,13 @@ public interface BookMapper {
 	public int reserveStatusUpdate(BookDetailVO vo);
 	
 	// 프로시저 호출	
-	public void tourStatusUpdateWhenBooking(long tourNo);
+	public void tourStatusUpdateWhenBooking(long tourNo); // 예약 했을 떄
+	public void tourStatusUpdateWhenCancel(long tourNo); // 예약 취소 했을 때
 	
-	public void tourStatusUpdateWhenCancel(long tourNo);
-	
-	// 회원 정보 수정
+	// 예약자 정보 수정
 	public int bookInfoUpdate(BookVO vo);
 	
+	// 예약 상태 수정
 	public int bookStatusUpdate(long bookNo);
 	
 	

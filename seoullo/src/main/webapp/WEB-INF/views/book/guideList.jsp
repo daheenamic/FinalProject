@@ -10,8 +10,10 @@
 <title>가이드 예약리스트</title>
 <script type="text/javascript">
 $(function() {
+
+	// '[마감]'이 들어간 곳은 color를 빨간색으로 바꾸기
 	$('.tourDayInfoDiv').each(function() {
-		if ($(this).find('#status').text().trim() === '[ 마감 ]') {
+		if ($(this).find('#status').text().trim() === '[마감 ]') {
 			$(this).find('span').css('color', '#d8421c');
 		}
 	});
@@ -39,7 +41,8 @@ $(function() {
 		  alert("취소되었습니다.");
 		}
 	});
-	
+
+	// 리스트 버튼 눌렀을 때
 	$("#listBtn").click(function(){
 		location = "/tour/list.do";
 	})

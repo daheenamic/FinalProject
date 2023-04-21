@@ -46,17 +46,6 @@ a:focus {
 	cursor: pointer;
 }
 </style>
-<script type="text/javascript">
-$(function(){
-	
-	// 검색 데이터 유지
-// 	<c:if test="${!empty pageObject.word}">
-// 		$("#key").val("${(!empty pageObject.key)?pageObject.key:'t'}");
-// 		$("#word").val("${pageObject.word}");
-// 	</c:if>
-	
-});
-</script>
 </head>
 <body>
 	<div class="container">

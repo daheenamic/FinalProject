@@ -72,14 +72,17 @@ hr{
 </style>
 <script type="text/javascript">
 $(function(){
+	// 예약리스트로 돌아가기
 	$("#listBtn").click(function(){
 		location="/book/list.do";
 	});
+	// 예약 취소 버튼 눌렀을 때
 	$("#cancelBtn").click(function() {
 		if (confirm("예약을 취소하시겠습니까?")) {
 			$("#cancelForm").submit();
 		}
 	});
+	// 예약 수정버튼 눌렀을 때
 	$("#modifyBtn").click(function(){
 		let no = $(this).parent(".title").find("#modifyNo").text();
 		location="/book/modify.do?no="+no;

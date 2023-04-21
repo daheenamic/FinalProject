@@ -2,6 +2,7 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.seoullo.book.mapper.BookMapper">
 
+	<!-- 예약리스트 (관리자용) -->
 	<select id="list" resultType="com.seoullo.book.vo.BookVO">
 		SELECT no, payStatus, payPrice, payMethod, id
 		FROM (
@@ -20,6 +21,7 @@
 		WHERE rnum BETWEEN #{startRow} and #{endRow}
 	</select>
 	
+	<!-- 예약리스트(회원용) -->
 	<select id="perList" resultType="com.seoullo.book.vo.BookVO">
 		SELECT no, payStatus, payPrice, payMethod, id
 		FROM (
@@ -39,6 +41,7 @@
 		WHERE rnum BETWEEN #{pageObject.startRow} and #{pageObject.endRow}
 	</select>
 	
+	<!-- 페이징 처리를 위한 전체 데이터 갯수 세기 -->
 	<select id="getTotalRow" resultType="Long">
 		SELECT COUNT(*)
 		FROM booking b
@@ -48,6 +51,7 @@
 		<include refid="searchJoin" />
 	</select>
 	
+	<!-- 관리자용 검색기능 (투어이름,예약번호,투어지역,예약상태)-->
 	<sql id="search">
 		<if test="word != null and word != ''.toString()">
 			AND 1 = 0
@@ -66,6 +70,7 @@
 		</if>
 	</sql>
 	
+	<!-- 회원용 검색기능 (투어이름,예약번호,투어지역) -->
 	<sql id="searchForPer">
 		<if test="pageObject.word != null and pageObject.word != ''.toString()">
 			AND 1 = 0
@@ -81,6 +86,7 @@
 		</if>
 	</sql>
 
+	<!-- 검색기능 사용 시 Join조건 넣기 -->
 	<sql id="searchJoin">
 		<if test="word != null and word != ''.toString()">
 			AND m.id = b.mid
@@ -89,12 +95,14 @@
 		</if>
 	</sql>
 	
+	<!-- 검색기능 사용시에 불러올 데이터에 해당하는 테이블 추가 -->
 	<sql id="searchTable">
 		<if test="word != null and word != ''.toString()">
 			, member m, tour t, bookdetail bd
 		</if>
 	</sql>
 	
+	<!-- 예약자의 정보 불러오기 -->
 	<select id="view" resultType="com.seoullo.book.vo.BookVO">
 		SELECT b.no, m.id, b.name, b.gender, b.email, b.tel,
 				b.bookDate, b.payStatus, b.payMethod, b.payPrice
@@ -103,6 +111,7 @@
 		AND b.no = #{no}
 	</select>
 	
+	<!-- 예약자의 투어정보 불러오기 -->
 	<select id="viewDetail" resultType="com.seoullo.book.vo.BookDetailVO">
 		SELECT bd.no, bd.bookNo, bd.tourNo, t.thumbnail, t.title, t.type, t.region, td.day, bd.peopleA, bd.peopleB, 
 		b.payStatus, b.payPrice, bd.bookStatus, t.guideId, b.mId, b.name, b.gender, b.email, b.tel, bd.review
@@ -115,6 +124,7 @@
 		AND b.no = #{no} 
 	</select>
 	
+	<!-- 가이드의 투어 일자별 리스트 (일자, 투어상태, 예약인원, 마감인원) -->
 	<select id="guideList" resultType="com.seoullo.book.vo.GuideVO">
 		SELECT day, status, reserveNum, maxNum
 		FROM tourDate
@@ -122,6 +132,7 @@
 		ORDER BY day ASC
 	</select>
 	
+	<!-- 가이드의 투어 일자별 예약자 정보 리스트 -->
 	<select id="guideDetailList" resultType="com.seoullo.book.vo.GuideDetailVO">
 		SELECT bd.no, b.name, b.tel, b.email, b.gender, bd.peopleA, bd.peopleB, bd.bookStatus, bd.review
 		FROM booking b, bookDetail bd, tourDate td
@@ -131,25 +142,30 @@
 		AND bd.tourNo = td.tourNo
 	</select>
 	
+	<!-- 가장 최근에 INSERT한 예약자 정보 불러오기 -->
 	<select id="findBookNo" resultType="long">
 		SELECT MAX(no) no FROM booking WHERE mId = #{id}
 	</select>
 	
+	<!-- 예약자 정보 입력 -->
 	<insert id="book">
 		INSERT INTO booking (no, mId, name, gender, email, tel, payMethod, payStatus ,payPrice)
 		VALUES (booking_seq.NEXTVAL, #{id}, #{name}, #{gender}, #{email}, #{tel}, #{payMethod}, #{payStatus}, #{payPrice})
 	</insert>
 	
+	<!-- 예약자의 투어 정보 입력 -->
 	<insert id="bookDetail">
 		INSERT INTO bookDetail (no, bookNo, tourNo, day, peopleA, peopleB, tourPrice, bookStatus)
 		VALUES (bookDetail_seq.NEXTVAL, #{bookNo}, #{tourNo}, #{day}, #{peopleA}, #{peopleB}, #{tourPrice}, #{bookStatus})
 	</insert>
 	
+	<!-- 후기 작성 시 리뷰 상태 변경 -->
 	<update id="updateReview">
 		update bookDetail set review = '작성완료'
 		where no = #{no}
 	</update>
 	
+	<!-- 후기 삭제시 리뷰 상태 변경 -->
 	<update id="deleteReview">
 		update bookDetail set review = '작성가능'
 		where no = #{no}
@@ -196,13 +212,13 @@
 		{ CALL tour_Status_at_Cancel (#{tourNo}) }
 	</select>
 	
-	<!-- 회원정보 수정 -->
+	<!-- 예약자 정보 수정 -->
 	<update id="bookInfoUpdate">
 		UPDATE booking SET name=#{name}, gender=#{gender}, email=#{email}, tel=#{tel}, payStatus=#{payStatus}
 		WHERE no = #{no}
 	</update>
 	
-	<!-- 예약상태수정 -->
+	<!-- 예약 상태 수정 -->
 	<update id="bookStatusUpdate">
 		UPDATE bookDetail SET bookStatus = '예약완료'
 		WHERE bookNo = #{bookNo} AND bookStatus = '예약대기'
