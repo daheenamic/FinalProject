@@ -40,3 +40,11 @@
 #### 장바구니 <a href="https://github.com/daheenamic/FinalProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-(%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88)">[상세보기]</a>
 - 투어 일자와 인원 선택 후 장바구니에 담기
 - 장바구니 인원 수정과 장바구니 삭제
+
+## 📂 첨부 파일
+#### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C%20%EC%8A%A4%ED%82%A4%EB%A7%88.sql">이젠서울로 스키마.sql</a> 
+- 데이터베이스 시스템에서 테이블을 생성하고 구조를 정의하는데 사용되는 스키마 파일입니다.
+
+#### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%ED%85%8C%EC%9D%B4%EB%B8%94%EC%A0%95%EC%9D%98%EC%84%9C%20%EC%A2%85%ED%95%A9.pdf">이젠서울테이블정의서 종합.pdf</a>
+- 각 테이블의 구조와 정보를 정리한 문서입니다.
+
