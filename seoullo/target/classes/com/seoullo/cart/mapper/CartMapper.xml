@@ -2,6 +2,7 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.seoullo.cart.mapper.CartMapper">
 
+	<!-- 장바구니 리스트 -->
 	<select id="list" resultType="com.seoullo.cart.vo.CartVO">
 		SELECT c.no, c.tourNo, t.thumbnail, t.title, t.region, t.type, td.day, td.status, c.peopleA, c.peopleB, c.tourPrice, t.guideId, m.id,
 			td.priceA, td.priceB
@@ -14,6 +15,7 @@
 		ORDER BY c.no ASC
 	</select>
 	
+	<!-- 장바구니에서 예약하기를 위해 장바구니 번호 데이터로 예약 정보 가져오기 -->
 	<select id="orderList" resultType="com.seoullo.cart.vo.CartVO">
 		SELECT c.no, c.tourNo, t.thumbnail, t.title, t.region, t.type, td.day, c.peopleA, c.peopleB, c.tourPrice, t.guideId, m.id,
 		td.priceA, td.priceB
@@ -26,16 +28,19 @@
 		ORDER BY c.no ASC
 	</select>
 	
+	<!-- 장바구니 담기 -->
 	<insert id="add">
 		INSERT INTO cart (no, tourNo, day, peopleA, peopleB, tourPrice, mId)
 		VALUES (cart_seq.NEXTVAL, #{tourNo}, #{day}, #{peopleA}, #{peopleB}, #{tourPrice}, #{mId})
 	</insert>
 
+	<!-- 장바구니 수정 -->
 	<update id="update">
 		UPDATE cart SET peopleA = #{peopleA}, peopleB = #{peopleB}, tourPrice = #{tourPrice}
 		WHERE no = #{no}
 	</update>
 	
+	<!-- 장바구니 삭제 -->
 	<delete id="delete">
 		DELETE FROM cart
 		WHERE no = #{no}

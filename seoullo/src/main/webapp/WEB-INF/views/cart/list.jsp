@@ -85,11 +85,13 @@ $(function(){
 		$(".checkbox:checked").each(function(){
 			let status = $(this).parents("#allDiv").find("#statusSpan").text();
 			let tourPrice = $(this).parents("#allDiv").find("#tourPrice").val();
+			// 투어가격이 0일경우 = 선택 한 인원이 0명일 경우
 			if(tourPrice == 0) {
 	            alert("선택하신 투어 중 예약 인원이 0명인 투어가 있습니다.");
 	            tourPriceZero = true;
 	            return false; // each loop를 빠져나옴
 	        }
+	        // 이미 마감 된 일자일 경우
 			if(status.indexOf("마감") !== -1) {
 				alert("선택하신 투어 중 마감 된 투어가 있습니다.");
 				soldOutTour = true;
@@ -101,8 +103,9 @@ $(function(){
 	        return; // 선택한 상품 중 tourPrice가 0인 상품이 있으므로 예약 진행을 중단함
 	    }
 		if(cartNos.length === 0) {
-			alert("예약하실 투어 상품을 선택 해 주세요.");
+			alert("예약하실 투어 상품을 선택 해 주세요."); // 체크박스에 아무 투어도 선택되어있지 않을 경우
 		} else {
+			// 모든 조건을 만족하면 투어 예약을 진행한다.
 			location.href = "/book/book.do?cartNos=" + cartNos.join(",");
 		}
 	});
@@ -271,7 +274,7 @@ $(function(){
 					<h1 style="color: #4B8A08">장바구니에 담긴 상품이 없습니다.</h1>
 					<span style="color: #gray; font-size:15px;">
 						담기를 원하시면 아래
-						<span style="font-size:15px; font-weight: bold;">투어예약하기</span>
+						<span style="font-size:15px; font-weight: bold;">투어 담으러 가기</span>
 						버튼을 눌러주세요.
 					</span>
 					<br/><br/><br/>
