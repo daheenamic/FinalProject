@@ -22,7 +22,7 @@
 ## ⚙️ 개발 환경
 * Java 8
 * JDK 1.8
-* IDE: STS 4
+* IDE : STS 4
 * Framework : Spring
 * Database : OracleDB 11g XE
 * ORM : MyBatis
