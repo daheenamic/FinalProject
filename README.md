@@ -61,7 +61,7 @@
 - 위의 PDF와 같은 내용 입니다.
 
 <details>
-    <summary>내용보기</summary>
+    <summary>PPT 목차 미리 보기</summary>
 
 ![image](https://user-images.githubusercontent.com/118436137/234004546-1c620418-763e-4644-9720-e62dae62af07.png)
 </details>
