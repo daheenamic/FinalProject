@@ -1,5 +1,10 @@
 # EZENSEOULLO
 [Spring Project] 가이드와 함께하는 서울 투어 예약 사이트
+<details>
+    <summary>메인 View</summary>
+
+![메인](https://user-images.githubusercontent.com/118436137/234006451-eec6fae9-3dcb-48a9-bf9a-ead077e913ee.png)
+</details>
 
 ## 💻 프로젝트 소개
 '<a href="https://www.eurobike.kr/">유로자전거나라</a>'를 참고하여 만든 서울 투어 예약 사이트입니다.
@@ -50,9 +55,13 @@
 
 #### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C-pdf.pdf">이젠서울로-pdf.pdf</a>
 - 이젠 서울로 프로젝트 발표용 자료 입니다. (PDF 버전)
-- 파일에서 보실 수 있는 내용입니다.
-![image](https://user-images.githubusercontent.com/118436137/234004546-1c620418-763e-4644-9720-e62dae62af07.png)
 
 #### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C-ppt.pptx">이젠서울로-ppt.pptx</a>
 - 이젠 서울로 프로젝트 발표용 자료 입니다. (PPT 버전)
 - 위의 PDF와 같은 내용 입니다.
+
+<details>
+    <summary>내용보기</summary>
+
+![image](https://user-images.githubusercontent.com/118436137/234004546-1c620418-763e-4644-9720-e62dae62af07.png)
+</details>
