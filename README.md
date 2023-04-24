@@ -1,4 +1,4 @@
-# EZENSEOULLO
+# 🎎 EZENSEOULLO
 [Spring Project] 가이드와 함께하는 서울 투어 예약 사이트
 <details>
     <summary>메인 View</summary>
