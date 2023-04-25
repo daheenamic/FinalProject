@@ -53,15 +53,6 @@
 #### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%ED%85%8C%EC%9D%B4%EB%B8%94%EC%A0%95%EC%9D%98%EC%84%9C%20%EC%A2%85%ED%95%A9.pdf">이젠서울테이블정의서 종합.pdf</a>
 - 각 테이블의 구조와 정보를 정리한 문서입니다.
 
-#### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C%20%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf">이젠서울로 발표자료.pdf</a>
-- 이젠 서울로 프로젝트 발표용 자료 입니다. (PDF 버전)
-
-#### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C%20%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pptx">이젠서울로 발표자료.pptx</a>
-- 이젠 서울로 프로젝트 발표용 자료 입니다. (PPT 버전)
-- 위의 PDF와 같은 내용 입니다.
-
-<details>
-    <summary>PPT 목차 미리 보기</summary>
-
-![image](https://user-images.githubusercontent.com/118436137/234004546-1c620418-763e-4644-9720-e62dae62af07.png)
-</details>
+#### <a href="">이젠서울로 포트폴리오.pdf</a>
+- 이젠서울로 프로젝트 상세 포트폴리오 입니다.
+- 개발내용, 소요자원, 와이어프레임, DB모델링, 시연화면 및 기능소개 등이 포함되어 있습니다.
