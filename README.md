@@ -54,5 +54,5 @@
 - 각 테이블의 구조와 정보를 정리한 문서입니다.
 
 #### <a href="https://github.com/daheenamic/FinalProject/blob/master/%EC%9D%B4%EC%A0%A0%EC%84%9C%EC%9A%B8%EB%A1%9C%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4.pdf">이젠서울로 포트폴리오.pdf</a>
-- 이젠서울로 프로젝트 상세 포트폴리오 입니다.
+- 이젠서울로 프로젝트 상세 기능설명 포트폴리오 입니다.
 - 주제와 목적, 소요자원, 와이어프레임, DB모델링, 시연화면 및 기능소개 등이 포함되어 있습니다.
